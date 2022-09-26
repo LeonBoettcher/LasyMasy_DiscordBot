@@ -18,6 +18,8 @@ public class initaliser {
 
     public void readconfig(){
         Properties prop = new Properties();
+
+        // NEEDS TO BE CHANGED LATER
         String config = "C:\\Users\\Leon\\IdeaProjects\\LasyMasy-DCBot\\src\\main\\java\\org\\lasymasy\\bot.config";
 
         try (FileInputStream fis = new FileInputStream(config)) {
@@ -29,8 +31,4 @@ public class initaliser {
         token = prop.getProperty("token");
     }
 
-    public void jdaBuilder() {
-        JDABuilder jda = JDABuilder.createDefault(token);
-        jda.setActivity(Activity.playing("READY"));
-    }
 }
